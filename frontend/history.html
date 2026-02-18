@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Smart Bandage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Logo">
+            <span>Smart Bandage</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>History (Last 25 readings, 5 min interval)</h1>
+
+        <div class="charts">
+            <div class="chart-card">
+                <h2>Temperature History</h2>
+                <canvas id="tempHistoryChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Moisture History</h2>
+                <canvas id="moistHistoryChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>

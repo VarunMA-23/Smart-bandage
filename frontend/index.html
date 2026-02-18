@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bandage Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Logo">
+            <span>Smart Bandage</span>
+        </div>
+        <div class="nav-links">
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+
+
+    <!-- Main container -->
+    <div class="container">
+        <h1>Dashboard</h1>
+
+        <!-- Sensor Table -->
+        <div class="card">
+            <h2>Latest Sensor Readings</h2>
+            <table id="sensorTable">
+                <thead>
+                    <tr>
+                        <th>Temperature (°C)</th>
+                        <th>Moisture (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="tempVal">--</td>
+                        <td id="moistVal">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts">
+            <div class="chart-card">
+                <h2>Temperature Over Time</h2>
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Moisture Over Time</h2>
+                <canvas id="moistChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
